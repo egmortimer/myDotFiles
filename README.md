@@ -1,2 +1,2 @@
 # myDotFiles
-repo containing all of the dotfiles I use for bash, vim, csh, and more
+Repo for all of my custom settings for neovim, bash, etc. along with some of my custom scripts as well.
