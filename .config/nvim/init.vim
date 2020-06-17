@@ -13,6 +13,9 @@ Plug 'phanviet/vim-monokai-pro'
 Plug 'vim-airline/vim-airline'
 Plug 'flazz/vim-colorschemes'
 
+" Just for fun and practice
+" Plug 'ThePrimeagen/vim-be-good'
+
 call plug#end()
 
 colorscheme gruvbox
