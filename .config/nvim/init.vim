@@ -14,12 +14,15 @@ Plug 'vim-airline/vim-airline'
 Plug 'flazz/vim-colorschemes'
 
 " Just for fun and practice
-" Plug 'ThePrimeagen/vim-be-good'
+Plug 'ThePrimeagen/vim-be-good', { 'do': './install.sh'}
 
 call plug#end()
 
+let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 set background=dark
+
+let g:vim_be_good_floating = 1
 
 " Functional
 let mapleader = " "
@@ -41,6 +44,11 @@ nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
 nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
 nnoremap <leader>cr :CocRestart
 
+" Fugitive Mappings
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gu :diffget //2<CR>
+nmap <leader>gs :G<CR>
+
 " Custom Mapping
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -50,6 +58,7 @@ nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <Leader>pf :Files<CR>
+nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
@@ -57,7 +66,10 @@ nnoremap <Leader>- :vertical resize -5<CR>
 " Python3 VirtualEnv
 
 " General
-set number
+set termguicolors
+set noshowmatch
+set nohlsearch
+set relativenumber
 set title
 set laststatus=2
 set showcmd
@@ -67,9 +79,8 @@ set wildmenu
 set incsearch
 set ignorecase
 set smartcase
-set hlsearch
 
-set wrap
+set nowrap
 set breakindent
 
 " Tab stuff
@@ -77,4 +88,11 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set smarttab
-set autoindent
+set smartindent
+set expandtab
+
+set cmdheight=2
+
+" Having longer update times leads to noticable delays
+" and poor user experience - ThePrimeagen
+set updatetime=50
