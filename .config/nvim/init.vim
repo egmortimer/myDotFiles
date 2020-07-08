@@ -5,6 +5,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'tomlion/vim-solidity'
 
 " Colorschemes
 Plug 'gruvbox-community/gruvbox'
